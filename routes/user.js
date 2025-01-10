@@ -31,7 +31,6 @@ router.post('/createANewUser', async (req,res)=>{
     const body = req.body
 
     const validationResult = createUserSchema.validate(body)
-    console.log(validationResult)
     if(validationResult.error === null || !validationResult.error){
         const result = await users.createUser(body)
         if(result.success){
