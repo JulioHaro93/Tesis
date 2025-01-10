@@ -13,8 +13,11 @@ Content-Type: application/json
 
     {
         "nombre": "Juan Pérez",
-        "correo": "juan@ejemplo125.com",
-        "password": "secreta", 
-        "activo": true
+        "correo": "juan@ejemplo135.com",
+        "password": "secreta1",
+        "institution": "IPN",
+        "address": "CDMX, calle ejemplo, número 1",
+        "activo": false
+
     }
 
