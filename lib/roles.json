@@ -1,0 +1,10 @@
+{
+    "adminRole": {
+        "total": true,
+        "roles": []
+    },
+    "investigatorRole": {
+        "total": false,
+        "roles": []
+    }
+}

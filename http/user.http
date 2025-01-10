@@ -1,0 +1,21 @@
+
+@baseUrl= http://localhost
+@port = 8080
+
+
+# @name getUsers
+GET {{baseUrl}}:{{port}}/api/SeeUsers
+
+###
+# @name createUser
+POST {{baseUrl}}:{{port}}/api/createANewUser
+Content-Type: application/json
+
+    {
+        "nombre": "Juan Pérez",
+        "correo": "juan@ejemplo.com",
+        "password": "secreta", 
+        "activo": true,
+        "google": false
+    }
+
