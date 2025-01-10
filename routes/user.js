@@ -6,13 +6,12 @@ const path = '/usuarios'
 
 const router = Router();
 
-router.get('/SeeUsers', (req, res)=>{
+router.get('/SeeUsers', async (req, res)=>{
 
-    const result = users.getUsers();
+    const result = await users.getUsers();
     if(result.success){
         res.json({
-            result,
-            httpCode:200
+            result
         })
     }else{
         res.json({
@@ -27,15 +26,13 @@ router.put('/userModify', (req,res)=>{
 
 })
 
-router.post('/createANewUser',(req,res)=>{
+router.post('/createANewUser', async (req,res)=>{
     const body = req.body
-    console.log("BODYBODY")
-    console.log(body)
-    const result = users.createUser(body)
+    const result = await users.createUser(body)
     if(result.success){
-        res.json({result})
+        res.status(200).json({result})
     }else{
-        res.json({result})
+        res.status(result.httpCode).json({result})
     }
 })
 
