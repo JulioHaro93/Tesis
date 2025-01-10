@@ -9,8 +9,14 @@ const UserSchema = new Schema({
     activo: {type: Boolean, default: true},
     img: {type: String},
     google:{type:Boolean, default: false},
-    roles: {type: Object, default: {total: false, roles:[]}}
+    roles: {type: Object, default: {total: false, roles:[]}},
+    registerDate : {type: Date},
+    institution: {type: String},
+    address: {type: String,},
+    nikname: {type: String, unique: true}
 
+}, {
+    versionKey: false
 })
 
 const Usuarios = model('Usuarios', UserSchema);
